@@ -17,13 +17,13 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QMainWindow,
     QMenuBar, QPushButton, QSizePolicy, QStackedWidget,
-    QStatusBar, QVBoxLayout, QWidget)
+    QStatusBar, QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(800, 549)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayoutWidget = QWidget(self.centralwidget)
@@ -57,6 +57,9 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnMenu1.sizePolicy().hasHeightForWidth())
         self.btnMenu1.setSizePolicy(sizePolicy)
+        font = QFont()
+        font.setBold(True)
+        self.btnMenu1.setFont(font)
         self.btnMenu1.setStyleSheet(u"QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -76,6 +79,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.btnMenu2.sizePolicy().hasHeightForWidth())
         self.btnMenu2.setSizePolicy(sizePolicy1)
+        self.btnMenu2.setFont(font)
         self.btnMenu2.setStyleSheet(u"QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -90,10 +94,10 @@ class Ui_MainWindow(object):
         self.label_3 = QLabel(self.navmenu)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(10, 20, 131, 17))
-        font = QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        self.label_3.setFont(font)
+        font1 = QFont()
+        font1.setPointSize(12)
+        font1.setBold(True)
+        self.label_3.setFont(font1)
 
         self.verticalLayout.addWidget(self.navmenu)
 
@@ -110,7 +114,17 @@ class Ui_MainWindow(object):
 "}")
         self.label = QLabel(self.pageMenu1)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(40, 30, 54, 17))
+        self.label.setGeometry(QRect(10, 10, 54, 17))
+        self.label_4 = QLabel(self.pageMenu1)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(130, 190, 301, 71))
+        font2 = QFont()
+        font2.setPointSize(22)
+        font2.setBold(True)
+        self.label_4.setFont(font2)
+        self.label_4.setLineWidth(2)
+        self.label_4.setMidLineWidth(-2)
+        self.label_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.stackedWidget.addWidget(self.pageMenu1)
         self.pageMenu2 = QWidget()
         self.pageMenu2.setObjectName(u"pageMenu2")
@@ -120,7 +134,39 @@ class Ui_MainWindow(object):
 "}")
         self.label_2 = QLabel(self.pageMenu2)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(30, 20, 54, 17))
+        self.label_2.setGeometry(QRect(10, 10, 54, 17))
+        self.txtIndo = QTextEdit(self.pageMenu2)
+        self.txtIndo.setObjectName(u"txtIndo")
+        self.txtIndo.setGeometry(QRect(20, 70, 521, 101))
+        self.txtIndo.setStyleSheet(u"background: #ffffff\n"
+"")
+        self.txtEng = QTextEdit(self.pageMenu2)
+        self.txtEng.setObjectName(u"txtEng")
+        self.txtEng.setGeometry(QRect(20, 220, 521, 101))
+        self.txtEng.setStyleSheet(u"background: #f0f0f0\n"
+"")
+        self.txtEng.setReadOnly(True)
+        self.label_5 = QLabel(self.pageMenu2)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(20, 50, 101, 17))
+        self.label_6 = QLabel(self.pageMenu2)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(20, 200, 91, 17))
+        self.btnTranslate = QPushButton(self.pageMenu2)
+        self.btnTranslate.setObjectName(u"btnTranslate")
+        self.btnTranslate.setGeometry(QRect(460, 340, 81, 41))
+        self.btnTranslate.setFont(font)
+        self.btnTranslate.setStyleSheet(u"QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border: none;\n"
+"    padding: 10px;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
         self.stackedWidget.addWidget(self.pageMenu2)
 
         self.horizontalLayout.addWidget(self.widget)
@@ -141,10 +187,15 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.btnMenu1.setText(QCoreApplication.translate("MainWindow", u"Menu 1", None))
-        self.btnMenu2.setText(QCoreApplication.translate("MainWindow", u"Menu 2", None))
+        self.btnMenu1.setText(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.btnMenu2.setText(QCoreApplication.translate("MainWindow", u"Translator", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Aplikasi Sekolah", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Menu 1", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Welcome To Aplikasi \n"
+"SDIT NurHikmah", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Menu 2", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Bahasa Indonesia", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Bahasa Inggris", None))
+        self.btnTranslate.setText(QCoreApplication.translate("MainWindow", u"Translate", None))
     # retranslateUi
 

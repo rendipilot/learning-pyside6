@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>549</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,6 +69,11 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
     background-color: #3498db;
@@ -83,7 +88,7 @@ QPushButton:hover {
 }</string>
             </property>
             <property name="text">
-             <string>Menu 1</string>
+             <string>Home</string>
             </property>
            </widget>
            <widget class="QPushButton" name="btnMenu2">
@@ -101,6 +106,11 @@ QPushButton:hover {
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
     background-color: #3498db;
@@ -115,7 +125,7 @@ QPushButton:hover {
 }</string>
             </property>
             <property name="text">
-             <string>Menu 2</string>
+             <string>Translator</string>
             </property>
            </widget>
            <widget class="QLabel" name="label_3">
@@ -164,14 +174,43 @@ QPushButton:hover {
          <widget class="QLabel" name="label">
           <property name="geometry">
            <rect>
-            <x>40</x>
-            <y>30</y>
+            <x>10</x>
+            <y>10</y>
             <width>54</width>
             <height>17</height>
            </rect>
           </property>
           <property name="text">
            <string>Menu 1</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>190</y>
+            <width>301</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>22</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="lineWidth">
+           <number>2</number>
+          </property>
+          <property name="midLineWidth">
+           <number>-2</number>
+          </property>
+          <property name="text">
+           <string>Welcome To Aplikasi 
+SDIT NurHikmah</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </widget>
@@ -185,14 +224,102 @@ QPushButton:hover {
          <widget class="QLabel" name="label_2">
           <property name="geometry">
            <rect>
-            <x>30</x>
-            <y>20</y>
+            <x>10</x>
+            <y>10</y>
             <width>54</width>
             <height>17</height>
            </rect>
           </property>
           <property name="text">
            <string>Menu 2</string>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="txtIndo">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>521</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #ffffff
+</string>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="txtEng">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>220</y>
+            <width>521</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #f0f0f0
+</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Bahasa Indonesia</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>200</y>
+            <width>91</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Bahasa Inggris</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnTranslate">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>340</y>
+            <width>81</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+          </property>
+          <property name="text">
+           <string>Translate</string>
           </property>
          </widget>
         </widget>
