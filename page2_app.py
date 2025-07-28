@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
         self.add_bubble(teks_input_ai, sender="user")
         
         response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="claude-3-5-haiku",
         messages=[
             {"role": "user", "content": teks_input_ai}
         ],
