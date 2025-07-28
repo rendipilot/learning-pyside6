@@ -1,2 +1,3 @@
-pyqt-env/
+myvenv/
 __pycache__/
+.env

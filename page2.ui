@@ -147,6 +147,46 @@ QPushButton:hover {
              <string>Aplikasi Sekolah</string>
             </property>
            </widget>
+           <widget class="QPushButton" name="btnMenu3">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>141</width>
+              <height>37</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+            </property>
+            <property name="text">
+             <string>AI </string>
+            </property>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -164,13 +204,7 @@ QPushButton:hover {
          <string notr="true">background-color: #FCF8DD;
 </string>
         </property>
-        <widget class="QWidget" name="pageMenu1">
-         <property name="styleSheet">
-          <string notr="true">#pageMenu1{
-    background-color: #FCF8DD;
-    border: 1px solid black;
-}</string>
-         </property>
+        <widget class="QWidget" name="stackedWidgetPage1">
          <widget class="QLabel" name="label">
           <property name="geometry">
            <rect>
@@ -214,13 +248,7 @@ SDIT NurHikmah</string>
           </property>
          </widget>
         </widget>
-        <widget class="QWidget" name="pageMenu2">
-         <property name="styleSheet">
-          <string notr="true">#pageMenu2 {
-    background-color: #FCF8DD;
-    border: 1px solid black;
-}</string>
-         </property>
+        <widget class="QWidget" name="stackedWidgetPage2">
          <widget class="QLabel" name="label_2">
           <property name="geometry">
            <rect>
@@ -320,6 +348,94 @@ QPushButton:hover {
           </property>
           <property name="text">
            <string>Translate</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="stackedWidgetPage3">
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>54</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Menu 3</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnSend">
+          <property name="geometry">
+           <rect>
+            <x>450</x>
+            <y>410</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+          </property>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>39</y>
+            <width>521</width>
+            <height>281</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>519</width>
+             <height>279</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="chatLayout"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QTextEdit" name="txtAi">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>330</y>
+            <width>521</width>
+            <height>70</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #ffffff;
+border-radius: 12;</string>
           </property>
          </widget>
         </widget>
