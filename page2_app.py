@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
         self.add_bubble(teks_input_ai, sender="user")
         
         response = client.chat.completions.create(
-        model="deepseek/deepseek-chat",
+        model="gemini/gemini-2.5-pro",
         messages=[
             {"role": "user", "content": teks_input_ai}
         ],
