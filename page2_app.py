@@ -50,11 +50,12 @@ class MainWindow(QMainWindow):
         
         if not teks_input_ai:
             self.ui.txtAi.clear()
+            return
             
         self.add_bubble(teks_input_ai, sender="user")
         
         response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="openrouter/qwen/qwen3-coder",
         messages=[
             {"role": "user", "content": teks_input_ai}
         ],
