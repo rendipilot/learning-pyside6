@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 from openai import OpenAI
 from deep_translator import GoogleTranslator
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QScrollBar
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QScrollBar, QHBoxLayout, QWidget
 from PySide6.QtCore import QFile, Qt
 from ui_page2 import Ui_MainWindow  # <-- ini hasil dari pyside6-uic
 
@@ -54,11 +54,11 @@ class MainWindow(QMainWindow):
         self.add_bubble(teks_input_ai, sender="user")
         
         response = client.chat.completions.create(
-        model="gemini/gemini-2.5-pro",
+        model="gpt-4o-mini",
         messages=[
             {"role": "user", "content": teks_input_ai}
         ],
-        max_tokens=150,
+        max_tokens=450,
         temperature=0.7
 )
         
@@ -77,12 +77,19 @@ class MainWindow(QMainWindow):
         
         if sender == "user":
             label.setStyleSheet("background-color: lightblue; padding: 10px; border-radius: 10px;")
-            label.setAlignment(Qt.AlignRight)
+            alignment = Qt.AlignRight
         else:
             label.setStyleSheet("background-color: #dddddd; padding: 10px; border-radius: 10px;")
-            label.setAlignment(Qt.AlignLeft)
+            alignment = Qt.AlignLeft
+        
+        bubble_layout = QHBoxLayout()
+        bubble_layout.addWidget(label)
+        bubble_layout.setAlignment(alignment)
+        
+        bubble_widget = QWidget()
+        bubble_widget.setLayout(bubble_layout)
 
-        self.ui.chatLayout.addWidget(label)
+        self.ui.chatLayout.addWidget(bubble_widget)
         
     def scroll_to_bottom(self):
         scrollbar: QScrollBar = self.ui.scrollArea.verticalScrollBar()
