@@ -5,7 +5,7 @@ from openai import OpenAI
 from deep_translator import GoogleTranslator
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QScrollBar, QHBoxLayout, QWidget
 from PySide6.QtCore import QFile, Qt
-from ui_page2 import Ui_MainWindow  # <-- ini hasil dari pyside6-uic
+from ui_page2 import Ui_MainWindow 
 
 load_dotenv()
 
@@ -95,6 +95,9 @@ class MainWindow(QMainWindow):
     def scroll_to_bottom(self):
         scrollbar: QScrollBar = self.ui.scrollArea.verticalScrollBar()
         scrollbar.setValue(scrollbar.maximum())
+    
+    def go_to_management_murid(self):
+        return
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
