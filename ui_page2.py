@@ -117,8 +117,6 @@ class Ui_MainWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #2980b9;\n"
 "}")
-<<<<<<< HEAD
-=======
         self.btnMagMurid = QPushButton(self.navmenu)
         self.btnMagMurid.setObjectName(u"btnMagMurid")
         self.btnMagMurid.setGeometry(QRect(10, 210, 141, 41))
@@ -134,7 +132,6 @@ class Ui_MainWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #2980b9;\n"
 "}")
->>>>>>> 8fd90da (add button in main page)
 
         self.verticalLayout.addWidget(self.navmenu)
 
