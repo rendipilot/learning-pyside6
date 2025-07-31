@@ -117,6 +117,24 @@ class Ui_MainWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #2980b9;\n"
 "}")
+<<<<<<< HEAD
+=======
+        self.btnMagMurid = QPushButton(self.navmenu)
+        self.btnMagMurid.setObjectName(u"btnMagMurid")
+        self.btnMagMurid.setGeometry(QRect(10, 210, 141, 41))
+        self.btnMagMurid.setFont(font)
+        self.btnMagMurid.setStyleSheet(u"QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border: none;\n"
+"    padding: 10px;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
+>>>>>>> 8fd90da (add button in main page)
 
         self.verticalLayout.addWidget(self.navmenu)
 
@@ -243,6 +261,10 @@ class Ui_MainWindow(object):
         self.btnMenu2.setText(QCoreApplication.translate("MainWindow", u"Translator", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Aplikasi Sekolah", None))
         self.btnMenu3.setText(QCoreApplication.translate("MainWindow", u"AI ", None))
+<<<<<<< HEAD
+=======
+        self.btnMagMurid.setText(QCoreApplication.translate("MainWindow", u"Data Murid", None))
+>>>>>>> 8fd90da (add button in main page)
         self.label.setText(QCoreApplication.translate("MainWindow", u"Menu 1", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Welcome To Aplikasi \n"
 "SDIT NurHikmah", None))

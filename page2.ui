@@ -187,6 +187,40 @@ QPushButton:hover {
              <string>AI </string>
             </property>
            </widget>
+<<<<<<< HEAD
+=======
+           <widget class="QPushButton" name="btnMagMurid">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>210</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+            </property>
+            <property name="text">
+             <string>Data Murid</string>
+            </property>
+           </widget>
+>>>>>>> 8fd90da (add button in main page)
           </widget>
          </item>
         </layout>
