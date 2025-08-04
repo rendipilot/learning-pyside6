@@ -3,9 +3,10 @@ from dotenv import load_dotenv
 import os
 from openai import OpenAI
 from deep_translator import GoogleTranslator
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QScrollBar, QHBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QScrollBar, QHBoxLayout, QWidget, QStackedWidget
 from PySide6.QtCore import QFile, Qt
-from ui_page2 import Ui_MainWindow 
+from ui_page2 import Ui_MainWindow as Ui_Page2
+from ui_page3 import Ui_SecondWindow as Ui_Page3
 
 load_dotenv()
 
@@ -17,8 +18,24 @@ client = OpenAI(
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+        
+        self.stacked_widget = QStackedWidget()
+        self.setCentralWidget(self.stacked_widget)
+        
+        self.page2_ui = Ui_Page2()
+        self.page2_widget = QWidget()
+        self.page2_ui.setupUi(self.page2_widget)
+        
+        self.page3_ui = Ui_Page3()
+        self.page3_widget = QWidget()
+        self.page3_ui.setupUi(self.page3_widget)
+        
+        self.stacked_widget.addWidget(self.page2_widget)  # index 0
+        self.stacked_widget.addWidget(self.page3_widget)  # index 1
+        
+        self.stacked_widget.setCurrentIndex(0)
+        
+        self.page2_ui.btnMagMurid.clicked.connect(self.show_page3)
 
         # Sambungkan tombol ke fungsi ganti tampilan
         self.ui.btnMenu1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
@@ -27,6 +44,9 @@ class MainWindow(QMainWindow):
         
         self.ui.btnTranslate.clicked.connect(self.handle_translate)
         self.ui.btnSend.clicked.connect(self.send_message)
+        
+    def show_page3(self):
+        self.stacked_widget.setCurrentIndex(1)
         
     def handle_translate(self):
         # Ambil teks dari QTextEdit Bahasa Indonesia
